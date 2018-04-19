@@ -1,5 +1,5 @@
 name:            permutation
-version:         0.5.0.5
+version:         0.5.0.6
 homepage:        https://github.com/spacekitteh/permutation
 synopsis:        A library for permutations and combinations.
 description:
@@ -23,8 +23,8 @@ license-file:    LICENSE
 copyright:       (c) 2008. Patrick Perry <patperry@stanford.edu>
 author:          Patrick Perry
 maintainer:      Sophie Taylor <sophie@traumapony.org>
-cabal-version: >= 1.2.3
-build-type:      Custom
+cabal-version: >= 1.6
+build-type:      Simple
 tested-with:     GHC ==7.8.1
 
 extra-source-files:  examples/Enumerate.hs
@@ -38,6 +38,10 @@ extra-source-files:  examples/Enumerate.hs
                      tests/STPermute.hs
                      tests/Makefile
                      NEWS
+
+source-repository head
+  type:           git
+  location:       git://github.com/spacekitteh/permutation
 
 library
     hs-source-dirs:  lib
@@ -56,7 +60,7 @@ library
                      Data.Permute.Base
                      Data.Permute.IOBase
 
-    build-depends:   base < 5 && >=4, QuickCheck
+    build-depends:   base < 5 && >=4
     extensions:      BangPatterns, 
                      FlexibleContexts,
                      FunctionalDependencies, 
